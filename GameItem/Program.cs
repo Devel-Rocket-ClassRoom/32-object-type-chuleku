@@ -3,18 +3,18 @@ using System.Xml.Linq;
 Console.WriteLine("=== 인벤토리 시스템 테스트 ===");
 Console.WriteLine();
 Inventory inven = new Inventory();
-Weapon firesword = new Weapon("불꽃 검",25,500);
-inven.AddItem(firesword);
+Weapon Sword = new Weapon("불꽃 검",25,500);
+inven.AddItem(Sword);
 inven.AddItem(new Weapon("얼음 활", 20, 450));
 inven.AddItem(new Potion("체력 물약", 100, 50));
 inven.AddItem(new Potion("마나 물약", 50, 80));
 inven.ShowInfo();
 Console.WriteLine();
 Console.WriteLine("=== 타입 확인 테스트 ===");
-Console.WriteLine($"sword의 타입: {firesword.GetType().Name}");
-Console.WriteLine($"sword.GetType() == typeof(weapon): {firesword.GetType()==typeof(Weapon)}");
-Console.WriteLine($"sword.GetType() == typeof(item): {firesword.GetType()==typeof(Item)}");
-Console.WriteLine($"sword is Item: {firesword is Item}");
+Console.WriteLine($"sword의 타입: {Sword.GetType().Name}");
+Console.WriteLine($"sword.GetType() == typeof(weapon): {Sword.GetType()==typeof(Weapon)}");
+Console.WriteLine($"sword.GetType() == typeof(item): {Sword.GetType()==typeof(Item)}");
+Console.WriteLine($"sword is Item: {Sword is Item}");
 class Item
 {
     public string Name;
